@@ -135,6 +135,16 @@
       margin: 18px auto 0;
     }
 
+    /* EXTRA SECTION HERO BANNERS */
+    .section-hero img {
+      width: 100%;
+      height: 42vh;
+      object-fit: cover;
+      display: block;
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
+      margin: 0 auto;
+    }
+
     /* ================= ABOUT ================= */
 
     .about {
@@ -148,9 +158,9 @@
     }
 
     .about-image img {
-      width: 420px;
+      width: 500px;
       max-width: 100%;
-      border-radius: 18px;
+      border-radius: 6px;
       box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
     }
 
@@ -159,7 +169,7 @@
     }
 
     .about-text h2 {
-      text-align: left;
+      text-align: center;
       margin-bottom: 18px;
     }
 
@@ -167,6 +177,7 @@
       margin-bottom: 16px;
       font-size: 17px;
       color: #475569;
+      text-align: center;
     }
 
     /* ================= SERVICES ================= */
@@ -204,12 +215,6 @@
       width: 46px;
       height: 46px;
       align-items: center;
-      /* border-radius: 14px; */
-      /* background: rgba(2, 132, 199, 0.10); */
-      /* display: flex; */
-      /* align-items: center;
-      justify-content: center;
-      margin-bottom: 16px; */
     }
 
     .service-card img {
@@ -233,7 +238,9 @@
     /* ================= MAP ================= */
 
     .map {
-      background: #f8fafc;
+      background: #ffffff;
+      padding-top: 10px;
+      padding-bottom: 10px;
     }
 
     .map iframe {
@@ -241,7 +248,6 @@
       height: 420px;
       border-radius: 18px;
       box-shadow: 0 12px 26px rgba(0, 0, 0, 0.06);
-      border: 0;
     }
 
     /* ================= HOURS + CONTACT (COMBINED) ================= */
@@ -372,6 +378,22 @@
     }
 
     @media (max-width: 600px) {
+      .top-bar-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .business-name {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .top-right {
+        width: 100%;
+        justify-content: center;
+      }
+
       h2 {
         font-size: 30px;
       }
@@ -400,6 +422,48 @@
       .divider {
         display: none;
       }
+    }
+
+    /* ================= FOOTER ================= */
+
+    .reviews {
+      background: #ffffff;
+      padding-top: 30px;
+      padding-bottom: 20px;
+    }
+
+    .reviews-text {
+      text-align: center;
+      color: #475569;
+      margin-top: -18px;
+      margin-bottom: 22px;
+    }
+
+    .reviews-actions {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .reviews-btn {
+      background: #0284c7;
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 16px;
+      border-radius: 12px;
+      font-weight: 600;
+      transition: 0.2s ease;
+    }
+
+    .reviews-btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .reviews-btn.outline {
+      background: transparent;
+      color: #0284c7;
+      border: 1px solid #0284c7;
     }
 
     /* ================= FOOTER ================= */
@@ -484,9 +548,9 @@
   <!-- ABOUT SECTION -->
   <section class="about">
     <div class="container about-content">
-      <div class="about-image">
+      <!-- <div class="about-image">
         <img src="img/garage.jpeg" alt="Gills Autoworx Logo">
-      </div>
+      </div> -->
 
       <div class="about-text">
         <h2>About Us</h2>
@@ -511,6 +575,11 @@
       </div>
     </div>
   </section>
+
+  <!-- HERO BANNER BEFORE SERVICES -->
+  <div class="section-hero">
+    <img src="img/enginework.jpg" alt="Garage services" />
+  </div>
 
   <!-- SERVICES SECTION -->
   <section class="services">
@@ -557,6 +626,11 @@
     </div>
   </section>
 
+  <!-- HERO BANNER BEFORE INFORMATION -->
+  <div class="section-hero">
+    <img src="img/toolset.jpg" alt="Contact and booking" />
+  </div>
+
   <!-- HOURS + CONTACT (COMBINED) -->
   <section class="info-section">
     <h2>Information</h2>
@@ -594,15 +668,34 @@
     </div>
   </section>
 
+  <!-- HERO BANNER BEFORE MAPS -->
+  <div class="section-hero">
+    <img src="img/oilchange.jpg" alt="Garage services" />
+  </div>
+
+  <section class="reviews">
+    <div class="container">
+      <h2>What Our Customers Say</h2>
+
+      <div class="reviews-actions">
+        <a class="reviews-btn" target="_blank" rel="noopener"
+          href="https://www.google.com/maps/reviews/@53.9254054,-7.9883843,17z/data=!3m1!4b1!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xjeFNtMVJUeTE2U20xNWFEbDBNalkzVVUxSVdVRRAB!2m1!1s0x0:0x744e7b7a0fae614?entry=ttu&g_ep=EgoyMDI2MDIxOC4wIKXMDSoASAFQAw%3D%3D">
+          Read Google Reviews
+        </a>
+
+        <a class="reviews-btn outline" target="_blank" rel="noopener"
+          href="https://www.google.com/search?hl=en-IE&gl=ie&q=Gills+Autoworx+Ltd.,+Annaduff,+Carrick+on+Shannon,+Co.+Leitrim&ludocid=523798232547649044&lsig=AB86z5VsPpCbi9Y9qXan2Mx_akuV#lrd=0x485e87c701e9c99f:0x744e7b7a0fae614,3">
+          Leave a Review
+        </a>
+      </div>
+  </section>
+
   <!-- MAP -->
   <section class="map">
-    <div class="container">
-      <h2>Find Us</h2>
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9622965.386343895!2d-7.988384000000001!3d53.925405!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x485e87c701e9c99f%3A0x744e7b7a0fae614!2sGills%20Autoworx%20Ltd.!5e0!3m2!1sen!2sie!4v1771714915585!5m2!1sen!2sie"
-        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9622965.386343895!2d-7.988384000000001!3d53.925405!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x485e87c701e9c99f%3A0x744e7b7a0fae614!2sGills%20Autoworx%20Ltd.!5e0!3m2!1sen!2sie!4v1771714915585!5m2!1sen!2sie"
+      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
   </section>
 
   <!-- FOOTER -->
