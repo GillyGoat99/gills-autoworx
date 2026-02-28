@@ -123,19 +123,31 @@
       background: #cbd5e1;
     }
 
-    /* ================= HERO (FULL SCREEN IMAGE) ================= */
+    /* ================= HERO ================= */
+
     .hero-image {
       width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .hero-image img {
       width: 100%;
-      height: 65vh;
-      object-fit: cover;
+      max-width: 900px;
+      height: auto;
+      object-fit: contain;
+      /* prevents cropping */
       display: block;
-      margin: 0;
-      border-radius: 18px;
-      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
+      margin: 20px auto;
+    }
+
+    /* Mobile fix */
+    @media (max-width: 600px) {
+      .hero-image img {
+        width: 95%;
+        height: auto;
+      }
     }
 
     /* Mobile: true full screen hero */
