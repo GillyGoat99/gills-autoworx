@@ -134,19 +134,20 @@
 
     .hero-image img {
       width: 100%;
-      max-width: 900px;
-      height: auto;
+      height: 65vh;
+      /* fills screen nicely */
       object-fit: contain;
-      /* prevents cropping */
+      /* keeps full logo visible */
       display: block;
-      margin: 20px auto;
+      margin: 0 auto;
     }
 
     /* Mobile fix */
     @media (max-width: 600px) {
       .hero-image img {
-        width: 95%;
-        height: auto;
+        height: 55vh;
+        /* prevents it being too tall on phones */
+        width: 100%;
       }
     }
 
@@ -372,6 +373,17 @@
 
     .contact-item a:hover {
       color: #0284c7;
+    }
+
+    /* Space between Opening Hours card and Contact Us card */
+    .info-section .info-container+.info-container {
+      margin-top: 22px;
+    }
+
+    @media (max-width: 600px) {
+      .info-section .info-container+.info-container {
+        margin-top: 16px;
+      }
     }
 
     /* ================= MAP ================= */
@@ -656,27 +668,30 @@
         </div>
 
         <div class="hours-note">Holiday opening hours may vary, please check with us.</div>
+      </div>
+    </div>
 
-        <div class="book-now">
-          <div class="book-now-title">Contact Us</div>
-          <div class="contact-info">
-            <div class="contact-item">
-              <img src="img/telephone.png" alt="Phone">
-              <a href="tel:+353851149125">(353) 085 114 9125</a>
-            </div>
-            <div class="contact-item">
-              <img src="img/locationpin.png" alt="Location">
-              <a href="https://maps.google.com/?q=Gills+Autoworx+Ltd" target="_blank" rel="noopener">
-                Annaduff, Carrick on Shannon, Co. Leitrim
-              </a>
-            </div>
-            <div class="contact-item">
-              <img src="img/management.png" alt="Manager">
-              <span>Manager: Eoin Gill</span>
-            </div>
+    <div class="container info-container">
+      <div class="info-card">
+        <div class="book-now-title">Contact Us</div>
+        <div class="contact-info">
+          <div class="contact-item">
+            <img src="img/telephone.png" alt="Phone">
+            <a href="tel:+353851149125">(353) 085 114 9125</a>
+          </div>
+          <div class="contact-item">
+            <img src="img/locationpin.png" alt="Location">
+            <a href="https://maps.google.com/?q=Gills+Autoworx+Ltd" target="_blank" rel="noopener">
+              Annaduff, Carrick on Shannon, Co. Leitrim
+            </a>
+          </div>
+          <div class="contact-item">
+            <img src="img/management.png" alt="Manager">
+            <span>Manager: Eoin Gill</span>
           </div>
         </div>
       </div>
+    </div>
     </div>
   </section>
 
